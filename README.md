@@ -28,20 +28,21 @@ This repo contains functions, aliases and options (setopt) that can be used in t
 **getip** | `dig +short myip.opendns.com @resolver1.opendns.com` | Gets your Public IP Address
 
 > Some of these aliases use VS Code with the `code` extension installed. Please install both of these before using the following aliases:
- - editProfile
- - editConfig
- - code
+> - editProfile
+> - editConfig
+> - code
 
 ### Options (setopt)
-**AUTO_CD**
-**EXTENDED_HISTORY**
-**SHARE_HISTORY**
-**APPEND_HISTORY**
-**INC_APPEND_HISTORY**
-**HIST_IGNORE_DUPS**
-**HIST_REDUCE_BLANKS**
-**CORRECT**
-**CORRECT_ALL**
+
+- AUTO_CD
+- EXTENDED_HISTORY
+- SHARE_HISTORY
+- APPEND_HISTORY
+- INC_APPEND_HISTORY
+- HIST_IGNORE_DUPS
+- HIST_REDUCE_BLANKS
+- CORRECT
+- CORRECT_ALL
 
 ---
 ## Setup
@@ -64,9 +65,9 @@ echo "source ~/.zsh/trmj/*.sh" >> ~/.zshrc
 ```
 
 > If you want to only add a specific item to your profile, just replace the asterisk with the item you want to add to your zsh profile:
- - aliases.sh
- - functions.sh
- - options.sh 
+> - aliases.sh
+> - functions.sh
+> - options.sh 
 
  4) When youre done adding the sources to your ~/.zshrc, you can either quit and reopen terminal to start a new session or type the following to update it manually:
 
