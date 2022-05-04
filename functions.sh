@@ -1,7 +1,7 @@
 #!/bin/bash
 
 getrepos(){
-    GITHUB_TOKEN=$(python3 -c 'import keyring; print(keyring.get_password("gh cli", "jamf mbp"))')
+    GITHUB_TOKEN=$(python3 -c 'import keyring; print(keyring.get_password("gh cli", "bender.rules"))')
     gh repo list
 }
 
