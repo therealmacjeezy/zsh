@@ -2,7 +2,7 @@
 
 #### Variables
 email_address="josh[at]macjeezy.com"
-github_username="therealmacjeezy-dev"
+github_username=""
 
 getrepos(){
     GITHUB_TOKEN=$(python3 -c 'import keyring; print(keyring.get_password("gh cli", "bender.rules"))')
