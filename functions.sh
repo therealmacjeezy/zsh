@@ -1,17 +1,14 @@
 #!/bin/bash
 
-#### Variables
-declare email_address
-email_address="josh[at]macjeezy.com"
-declare github_address
-github_username="therealmacjeezy"
-
 getrepos(){
     GITHUB_TOKEN=$(python3 -c 'import keyring; print(keyring.get_password("gh cli", "bender.rules"))')
     gh repo list
 }
 
 scriptHeader(){
+    #### Variables
+    email_address="josh[at]macjeezy.com"
+    github_username="therealmacjeezy"
     echo "What type of script are you trying to right? "
     printf '1) Shell (#!/bin/bash)\n'
     printf '2) Python 3\n'
