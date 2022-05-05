@@ -1,13 +1,13 @@
 #!/bin/sh
 
 #### Variables
-email_address="josh[at]macjeezy.com"
+email_address=""
 github_username=""
 
-getrepos(){
-    GITHUB_TOKEN=$(python3 -c 'import keyring; print(keyring.get_password("gh cli", "bender.rules"))')
-    gh repo list
-}
+# getrepos(){
+#     GITHUB_TOKEN=$(python3 -c 'import keyring; print(keyring.get_password("gh cli", "bender.rules"))')
+#     gh repo list
+# }
 
 scriptHeader(){
     echo "What type of script are you trying to right? "
