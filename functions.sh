@@ -1,5 +1,11 @@
 #!/bin/bash
 
+#### Variables
+declare email_address
+email_address="josh[at]macjeezy.com"
+declare github_address
+github_username="therealmacjeezy"
+
 getrepos(){
     GITHUB_TOKEN=$(python3 -c 'import keyring; print(keyring.get_password("gh cli", "bender.rules"))')
     gh repo list
@@ -29,13 +35,23 @@ scriptHeader(){
         ;;
     esac
 
+    if [[ ! -z "$email_address" ]] && [[ ! -z "$github_username" ]]; then
+        user_info="# $email_address\r# https://github.com/$github_username\r##########################################"
+    elif [[ -z "$email_address" ]] && [[ ! -z "$github_username" ]]; then
+        user_info="# https://github.com/$github_username\r##########################################"
+    elif [[ ! -z "$email_address" ]] && [[ -z "$github_username" ]]; then
+        user_info="# $email_address\r##########################################"
+    elif [[ -z "$email_address" ]] && [[ -z "$github_username" ]]; then
+        user_info="##########################################"
+    fi
+
+
     printf "$script_type
 # $script_name
 # Created: $(date '+%F')
 # Modified: N/A
-# josh.harvey[at]jamf.com
-# github.com/therealmacjeezy
-##########################################
+$user_info
+
 " | pbcopy
 }
 
