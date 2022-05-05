@@ -1,4 +1,8 @@
-#!/bin/bash
+#!/bin/sh
+
+#### Variables
+email_address="josh[at]macjeezy.com"
+github_username="therealmacjeezy-dev"
 
 getrepos(){
     GITHUB_TOKEN=$(python3 -c 'import keyring; print(keyring.get_password("gh cli", "bender.rules"))')
@@ -6,9 +10,6 @@ getrepos(){
 }
 
 scriptHeader(){
-    #### Variables
-    email_address="josh[at]macjeezy.com"
-    github_username="therealmacjeezy"
     echo "What type of script are you trying to right? "
     printf '1) Shell (#!/bin/bash)\n'
     printf '2) Python 3\n'
@@ -51,6 +52,8 @@ $user_info
 
 " | pbcopy
 }
+
+scriptHeader
 
 # Takes you to the path of the current open Finder window
 cdf () {

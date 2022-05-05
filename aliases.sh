@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 alias editProfile='code ~/.zshrc'
 alias editConfig='code ~/.ssh/config'
